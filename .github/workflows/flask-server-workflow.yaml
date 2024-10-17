@@ -18,7 +18,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
       - name: Build and push
+        env:
+          SHA: $GITHUB_SHA
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{ vars.DOCKERHUB_USERNAME }}/myflask:$GITHUB_SHA
+          tags: ${{ vars.DOCKERHUB_USERNAME }}/myflask:${{var.SHA}}
