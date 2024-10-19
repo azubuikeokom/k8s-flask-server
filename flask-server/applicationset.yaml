@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: cluster-addons
+  name: flask-server
   namespace: argocd
 spec:
   goTemplate: true
   goTemplateOptions: ["missingkey=error"]
   generators:
   - git:
-      repoURL: https://github.com/argoproj/argo-cd.git
+      repoURL: https://github.com/azubuikeokom/k8s-flask-server.git
       revision: HEAD
       directories:
-      - path: applicationset/examples/git-generator-directory/cluster-addons/*
+      - path: /*
   template:
     metadata:
       name: '{{.path.basename}}'
