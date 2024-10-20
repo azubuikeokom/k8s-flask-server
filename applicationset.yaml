@@ -16,7 +16,7 @@ spec:
     metadata:
       name: '{{.path.basename}}'
     spec:
-      project: "my-project"
+      project: "default"
       source:
         repoURL: https://github.com/azubuikeokom/k8s-flask-server.git
         targetRevision: HEAD
