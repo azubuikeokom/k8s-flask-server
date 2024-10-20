@@ -17,6 +17,11 @@ spec:
       name: '{{.path.basename}}'
     spec:
       project: "default"
+      syncPolicy: 
+        automated:
+          selfHeal: true 
+        syncOptions:
+        - CreateNamespace=true
       source:
         repoURL: https://github.com/azubuikeokom/k8s-flask-server.git
         targetRevision: HEAD
@@ -24,6 +29,4 @@ spec:
       destination:
         server: https://kubernetes.default.svc
         namespace: '{{.path.basename}}'
-      syncPolicy:
-        syncOptions:
-        - CreateNamespace=false
+
