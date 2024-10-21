@@ -11,7 +11,7 @@ spec:
       repoURL: https://github.com/azubuikeokom/k8s-flask-server.git
       revision: HEAD
       directories:
-      - path: flask-server/*
+      - path: apps/flask-server/*
   template:
     metadata:
       name: '{{.path.basename}}'
