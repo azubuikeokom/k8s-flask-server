@@ -21,8 +21,9 @@ spec:
       syncOptions:
       - CreateNamespace=true
       source:
-        chart: argo/argo-rollouts
-        repoURL: https://argoproj.github.io/argo-helm
+        repoURL: https://github.com/argoproj
+        targetRevision: HEAD
+        path: argo-rollouts/releases/latest/download/
       destination:
         server: '{{.url}}'
         namespace: argo-rollouts
