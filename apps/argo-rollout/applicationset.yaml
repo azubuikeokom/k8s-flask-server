@@ -23,7 +23,6 @@ spec:
       source:
         chart: argo/argo-rollouts
         repoURL: https://argoproj.github.io/argo-helm
-        targetRevision: 2.37.7
       destination:
         server: '{{.url}}'
         namespace: argo-rollouts
