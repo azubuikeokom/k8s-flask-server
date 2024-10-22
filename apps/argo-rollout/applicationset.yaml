@@ -23,7 +23,7 @@ spec:
       source:
         repoURL: https://github.com/azubuikeokom/k8s-flask-server.git
         targetRevision: HEAD
-        path: app/argo-rollout/install
+        path: apps/argo-rollout/install
       destination:
         server: '{{.url}}'
         namespace: argo-rollouts
