@@ -21,9 +21,9 @@ spec:
       syncOptions:
       - CreateNamespace=true
       source:
-        repoURL: https://github.com/argoproj
+        repoURL: https://github.com/azubuikeokom/k8s-flask-server.git
         targetRevision: HEAD
-        path: argo-rollouts/releases/latest/download/
+        path: app/argo-rollout/install
       destination:
         server: '{{.url}}'
         namespace: argo-rollouts
